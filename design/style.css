@@ -1,0 +1,63 @@
+header {
+  background-image: linear-gradient(to top, rgb(159, 179, 197), white);
+  padding: 10px;
+}
+
+header ul {
+  justify-content: center;
+  list-style-type: none;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 0px;
+}
+
+header ul li {
+  padding: 10px;
+}
+
+header ul li:hover {
+  background-image: linear-gradient(to top, rgb(159, 179, 197), white);
+  box-shadow: 0px 0px 2px gray;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: navy;
+}
+
+main .beispiel {
+  padding: 10px;
+  line-height: 150%;
+  border-radius: 20px;
+  background-color: honeydew;
+  border: mediumseagreen 2px outset;
+}
+
+footer > div {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+footer div div {
+  width: 45%;
+  padding: 10px;
+}
+
+footer div div:nth-child(1) {
+  border-right: 1px solid gray;
+}
+
+footer div div li {
+  line-height: 200%;
+  font-size: 90%;
+}
+
+footer p {
+  width: 100%;
+  padding: 10px;
+  padding-top: 0px;
+  border-bottom: 1px solid gray;
+}

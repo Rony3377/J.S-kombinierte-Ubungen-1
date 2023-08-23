@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="design/style.css" />
+    <title>JavaScript Übungen</title>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="index.html">Klammern</a></li>
+        <li><a href="zusammen.html">Zusammensetzen</a></li>
+        <li><a href="if.html">If</a></li>
+        <li><a href="switch.html">Switch</a></li>
+        <li><a href="ternary.html">Ternary Operator</a></li>
+        <li><a href="funktion1.html">Funktionen 1</a></li>
+        <li><a href="funktion2.html">Funktionen 2</a></li>
+        <li><a href="for1.html">Klassisches for</a></li>
+        <li><a href="for2.html">Spezielles for</a></li>
+        <li><a href="foreach.html">forEach</a></li>
+        <li><a href="fehler1.html">Finde Fehler 1</a></li>
+        <li><a href="fehler2.html">Finde Fehler 2</a></li>
+      </ul>
+    </header>
+    <hr />
+    <main>
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - --
+        -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - --
+        -- Hier wird das Beispiel angezeigt
+        -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - --
+        -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      <div class="beispiel" id="ausgabe"></div>
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - --
+        -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - --
+        -- Hier liegt der JavaScript Code
+        -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - --
+        -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      <script>
+        // Verbindung zum HTML-Element
+        //
+        const element = document.getElementById("ausgabe");
+        //
+        // Benutzer das folgende Array und setze den folgenden Text als
+        // Mischtext zusammen. Verwende dabei die passenden Einträge
+        // mit den richtigen Positionswerten. Der TEXT lautet wie folgt:
+        //
+        // Ein Text ist eigentlich auch ein Array und jeder Buchstabe
+        // sowie Sonderzeichen in einem Text ist eigentlich ein Eintrag 
+        // im Array und wird mit Hilfe der Position bzw. Index erreicht.
+        // Einmal erreicht, kann ein Eintrag ausgelesen werden oder
+        // durch einen neuen Wert überschrieben werden.
+        //
+        const wort = [
+          "Einmal", "eigentlich", "ein", "ist", "Array", "und", "jeder", "auch" ,
+          "sowie", "Eintrag", "Sonderzeichen", "in", "einem", "Ein", "Buchstabe",
+          "im", "wird", "Position",  "Index",  ".", "durch", "neuen", "Wert", 
+          "überschrieben", "erreicht", ",", "kann", "ausgelesen", "werden", 
+          "oder", "Text", "bzw", "einen",  "mit", "Hilfe", "der"
+        ];
+        element.innerHTML += `${wort[13]} ${wort[30]} ${wort[3]} ${wort[1]} ${wort[7]} ${wort[2]} ${wort[4]}
+        ${wort[5]} ${wort[6]} ${wort[14]} ${wort[8]} ${wort[10]} ${wort[11]} ${wort[14]} ${wort[30]}
+        ${wort[5]} ${wort[11]} ${wort[2]} ${wort[9]} ${wort[15]} ${wort[4]} ${wort[5]} ${wort[16]} ${wort[33]}
+        ${wort[34]} ${wort[35]} ${wort[17]} ${wort[31]} ${wort[19]} ${wort[18]} ${wort[24]} ${wort[19]}
+        ${wort[0]} ${wort[24]} ${wort[25]} ${wort[26]} ${wort[2]} ${wort[9]} ${wort[27]} ${wort[28]}
+        ${wort[29]} ${wort[30]} ${wort[20]} ${wort[35]} ${wort[21]} ${wort[22]} ${wort[23]} ${wort[28]}`;
+        //
+        // Ignoriere die Stelle und schau weiter nach unten!
+        //
+        element.innerHTML += `<hr>`;
+        //
+        // Benutzer das folgende JSON-OBJEKT und setze den folgenden Text
+        // als Mischtext zusammen. Verwende dabei die passenden Keys.
+        // Der Text lautet wie folgt:
+        //
+        // Ein JSON Objekt ist ein Blockklammer, der mehrere sogenannte 
+        // KEYs enthält. Jedes KEY repräsentiert eine bestimmte Information.
+        // Die Information kann eine Zahl, ein Text, ein Boolean, ein 
+        // Array oder auch ein anderer JSON sein. Nach dem man den KEY
+        // angibt, muss ein Doppelpunkt folgen. Anschließend kommt der 
+        // Wert (Das ist die Information). Wenn weitere KEYs folgen sollen,
+        // dann muss man nun einen Komma machen und dann kann man schon
+        // den nächsten KEY anlegen. Beim letzten KEY braucht man kein
+        // Komma.
+        //
+        const begriff = {
+          g: "JSON", h: "Objekt", v: "Anschließend",
+          k: "Blockklammer", x: "mehrere", 
+          o: "sollen", d: "sogenannte", 
+          y: "Wenn", c: "weitere", n: "braucht", 
+          p: "letzten", e: "enthält", i: "Jedes", 
+          L: "repräsentiert", s: "bestimmte",
+          z: [ "Ein", "ein", "eine", "einen"], 
+          f: ["ist", "sind", "sein"], 
+          j: ["KEY", "KEYs"], 
+          Q: ["Nach", "nach", "machen"],
+          r: ["(", ")", ".", ",", "Doppelpunkt", "Komma"], 
+          m: ["Information", "Wert", "Text", "Zahl", "Boolean", "JSON", "Array"],
+          u: ["und", "oder", "kein", "muss", "kann", "dem"],
+          a: ["Das", "Die", "Das", "der", "die", "das", "dass"],
+          t: ["auch", "man", "Beim", "nun", "dann", "den", "kommt", "schon"],
+          w: ["folgen", "angibt", "anlegen", "nächsten", "anderer"]
+        };
+        element.innerHTML += `${begriff.z[0]} ${begriff.g} ${begriff.h} ${begriff.f[0]} ${begriff.z[1]} ${begriff.k}
+        ${begriff.r[3]} ${begriff.a[3]} ${begriff.x} ${begriff.d} ${begriff.j[1]} ${begriff.p} ${begriff.r[2]}
+        ${begriff.i} ${begriff.j[0]} ${begriff.L} ${begriff.z[2]} ${begriff.s} ${begriff.m[0]} ${begriff.r[2]}
+        ${begriff.a[1]} ${begriff.m[0]} ${begriff.u[4]} ${begriff.z[2]} ${begriff.m[3]} ${begriff.r[3]} 
+        ${begriff.z[1]} ${begriff.m[2]} ${begriff.r[3]} ${begriff.z[1]} ${begriff.m[4]} ${begriff.z[4]}
+        ${begriff.z[1]} ${begriff.m[6]} ${begriff.u[1]} ${begriff.t[0]} ${begriff.z[1]} ${begriff.w[4]}
+        ${begriff.g} ${begriff.f[2]} ${begriff.r[2]} ${begriff.Q[0]} ${begriff.u[5]} ${begriff.t[1]} 
+        ${begriff.j[0]} ${begriff.w[1]} ${begriff.r[3]} ${begriff.u[3]} ${begriff.z[1]} ${begriff.r[4]}
+        ${begriff.w[0]} ${begriff.r[2]} ${begriff.v} ${begriff.t[6]} ${begriff.a[3]} ${begriff.m[1]}
+        ${begriff.r[0]} ${begriff.a[0]} ${begriff.f[0]} ${begriff.a[1]} ${begriff.m[0]} ${begriff.r[1]} ${begriff.r[2]}`;
+        //
+        // Ignoriere die Stelle und schau weiter nach unten!
+        //
+        element.innerHTML += `<hr>`;
+        //
+        // Benutze die Konstanten unten, füge selbst Wörter, wenn sie fehlen
+        // und erzeuge den folgenden Satz:
+        //
+        // Max Mustermann ist 40 Jahre alt und lebt in Berlin. Er ist 
+        // vom Beruf Busfaher.
+        //
+        const person = ["Mustermann", "Max", 40];
+        const extras = { Ort : "Berlin", Beruf: "Busfahrer" };
+        const x = "ist";
+        const y = "und";
+        const z = "Beruf";
+        const j = "Er";
+        element.innerHTML += `${person[1]} ${person[0]} ${x} ${person[2]} Jahre alt ${y} lebt in ${extras.Ort}.
+        ${j} ${x} vom  ${z} ${extras.Beruf}. `;
+        //
+        // Ignoriere die Stelle und schau weiter nach unten!
+        //
+        element.innerHTML += `<hr>`;
+        //
+        // Nuze die Funktionen, um den folgenden Satz zu formulieren:
+        //
+        // Das Sonnensystem enthält 8 Planeten mit den Namen 
+        // Merkur, Venus, Erde, Mars, Jupiter, Saturn, Uranus und Neptun.
+        // Die Erde ist der dritte Planet von der Sonne ausgesehen.
+        //
+        const fragment_1 = () =>
+        {
+          return `, Venus, Erde, Mars, Juputer, Saturn, `;
+        };
+        //
+        const fragment_2 = (n) =>
+        {
+          return n === 0
+          ? `Uranus und Neptun. `
+          : `Das Sonnensystem enthält 8`;
+        };
+        //
+        const fragment_3 = (i) =>
+        {
+          switch(i)
+          {
+            case 11: return `Planeten mit den Namen Merkur`;
+            case 62: return ` ist der dritte Planet `;
+            case 88: return ` der Sonne ausgesehen.`;
+            default: return `von`;
+          }
+        }
+        //
+        const fragment_4 = () => `Die Erde`;
+        //
+        element.innerHTML += fragment_2() + fragment_3(11) +fragment_1() + fragment_2(0) + fragment_4() +fragment_3(62) +fragment_3()
+        + fragment_3(88);
+      </script>
+    </main>
+    <hr />
+    <footer>
+      <p>
+        <h4>HINWEIS</h4>
+        Lese die Aufgaben sorgfältig durch. Achte sehr genau auf den Code. Nimm dir soviel Zeit, 
+        wie du brauchst. Beachte umbedingt die <b>Fehlerquellen</b> und <b>Hilfemittel</b> unten.
+      </p>
+      <div>
+      <div>
+        <h4>Fehlerquellen</h4>
+        <ul>
+          <li>Anzahl der Klammern</li>
+          <ul>
+            <li>{ und } &rarr; Blockklammer</li>
+            <li>[ und ] &rarr; Array-Klammer</li>
+            <li>( und ) &rarr; Parameterklammer oder Term-Klammer</li>
+            <li>&lt; und &gt; &rarr; HTML-Klammer</li>
+          </ul>
+          <li>
+            Groß- und Kleinschreibung
+            <ul>
+              <li><b>A</b> und <b>a</b> sind nicht dasselbe</li>
+            </ul>
+          </li>
+          <li>
+            Punkt
+            <ul>
+              <li>Beim Kommazahl</li>
+              <li>Beim Objekt-Key</li>
+              <li>Beim Array length, push, forEach</li>
+              <li>Beim toLowerCase(), toUpperCase() für Text</li>
+            </ul>
+          </li>
+          <li>
+            Komma
+            <ul>
+              <li>Zum Beispiel bei Kommazahlen</li>
+              <li>Beim Trennen von Parametern</li>
+              <li>Beim Anlegen von Array-Einträgen</li>
+              <li>Beim Trennen von JSON-Keys</li>
+            </ul>
+          </li>
+          <li>Doppelpunkt und Semikolon</li>
+          <li>
+            Namen
+            <ul>
+              <li>Auf Groß- und Kleinschreibung aufpassen</li>
+              <li>
+                im Selben Blockklammer können nicht zwei Ausdrücke mit demselben
+                Namen liegen
+              </li>
+              <li>Ein Name ist immer ein Wort!</li>
+            </ul>
+          </li>
+          <li>
+            Das Vergessen von
+            <ul>
+              <li>const</li>
+              <li>let</li>
+              <li>var</li>
+              <li>Semikolon</li>
+              <li>Klammer</li>
+              <li>Gänsefüßchen "" oder ' ' oder ` `</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hilfemittel</h4>
+        <ul>
+          <li>
+            Kommentiere einen Teil des Codes aus, um zu prüfen, ob der Rest
+            funktioniert.
+            <ul>
+              <li>// Einzeiliger Kommentar</li>
+              <li>/* Mehrzeiliger Kommentar */</li>
+            </ul>
+          </li>
+          <li>
+            Benutze die Konsole um zu prüfen, ob der Code funktioniert
+            <ul>
+              <li>console.log(x)</li>
+              <li>console.log(x,y,z)</li>
+              <li>
+                Die Konsole darf niemals vor einem Blockklammer liegen, die
+                einer Funktion, einem IF, einem SWITCH oder einer FOR gehört
+              </li>
+            </ul>
+          </li>
+          <li>
+            Orientiere dich an Farben im Code
+            <ul>
+              <li>
+                Die roten Zikzak-Unterstriche geben an, dass irgendwas über der
+                Stelle nicht richtig geschrieben ist
+              </li>
+              <li>
+                Rote Klammer sagt aus, das sie nicht geschlossen wurde oder
+                irgendein falscher Klammer vorhanden ist
+              </li>
+              <li>
+                Ist der Code ab einer Stelle ganz weis, dann ist ein
+                HTML-Klammer nicht zu oder der Code hat erhebliche Fehler
+              </li>
+              <li>
+                Ist der Code ab einer Stelle in Lila-Farbe, dann ist ein String
+                noch offen, also der Gänsefüßchen zum Schließen fehlt
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </footer>
+  </body>
+</html>
